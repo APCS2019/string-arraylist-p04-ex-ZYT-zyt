@@ -9,5 +9,5 @@ private StringPart findPart(String word){
     if(masterString.indexOf(word) != -1){
         return new StringPart(masterString.indexOf(word),word.length());
     }
-    return findPart(word.substring(0,word.length()-1);
+    return findPart(word.substring(0,word.length()-1));
 }
