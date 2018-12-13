@@ -6,8 +6,8 @@
      *  The method gives prefernce to return the longer matches.
      */
 private StringPart findPart(String word){
-    while(masterString.indexOf(word) == -1){
-        word = word.substring(0,word.length() -1);
+    if(masterString.indexOf(word) != -1){
+        return new StringPart(masterString.indexOf(word),word.length());
     }
-    return new StringPart(masterString.indexOf(word),word.length());
+    return findPart(word.substring(0,word.length()-1);
 }
